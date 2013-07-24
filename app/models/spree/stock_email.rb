@@ -10,11 +10,11 @@ class Spree::StockEmail < ActiveRecord::Base
   attr_accessible :email
 
   def self.email_exists?(product, email)
-    exists?(product_id: product.id, email: email, sent_at: nil)
+    exists?(sent_at: nil, product_id: product.id, email: email)
   end
 
   def self.notify(product)
-    where("product_id = ? AND sent_at IS NULL", product.id).each { |e| e.notify }
+    where(sent_at: nil, product_id: product.id).each { |e| e.notify }
   end
 
   def email_exists?
