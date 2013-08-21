@@ -7,8 +7,6 @@ class Spree::StockEmail < ActiveRecord::Base
 
   validate :unique_product_email
 
-  attr_accessible :email
-
   def self.email_exists?(product, email)
     exists?(sent_at: nil, product_id: product.id, email: email)
   end

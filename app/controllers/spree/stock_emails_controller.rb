@@ -13,7 +13,6 @@ class Spree::StockEmailsController < ApplicationController
       flash[:success] = "We'll email you when #{product.name} is back in stock!"
     rescue => e
       flash[:notice] = "There was a problem setting up your email alert. Please try again."
-      Bugsnag.notify e
     end
 
     redirect_to :back
