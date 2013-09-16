@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_stock_email'
-  s.version     = '0.0.3'
+4 s.version     = '0.0.4'
   s.summary     = 'Send an email when a product is in stock.'
   s.description = 'Send an email when a product is in stock.'
   s.required_ruby_version = '>= 1.9.3'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.1.0.beta'
+  s.add_dependency 'spree_core', '~> 2.2.0.beta'
 
   s.add_development_dependency 'capybara', '~> 2.1'
   s.add_development_dependency 'coffee-rails'
