@@ -5,11 +5,11 @@ Spree::Admin::StockItemsController.class_eval do
 
   def set_current_on_hand_value
     @variant = Spree::Variant.find(params[:variant_id])
-    @had_no_stock = !@variant.in_stock?(1)
+    @had_no_stock = !@variant.in_stock?
   end
 
   def send_stock_emails
-    Spree::StockEmail.notify(@variant.product) if @had_no_stock && @variant.in_stock?(1)
+    Spree::StockEmail.notify(@variant.product) if @had_no_stock && @variant.in_stock?
   end
 
 end
