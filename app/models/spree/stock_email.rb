@@ -20,7 +20,7 @@ class Spree::StockEmail < ActiveRecord::Base
   end
 
   def notify
-    Spree::StockEmailsMailer.stock_email(self).deliver
+    Spree::StockEmailsMailer.stock_email(self).deliver rescue nil
     mark_as_sent
   end
 
