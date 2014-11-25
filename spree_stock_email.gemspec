@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_stock_email'
-  s.version     = '0.0.5'
+  s.version     = '0.0.6'
   s.summary     = 'Send an email when a product is in stock.'
   s.description = 'Send an email when a product is in stock.'
   s.required_ruby_version = '>= 1.9.3'
